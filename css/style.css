@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    color: whitesmoke;
+}
+body{
+    background-image: url(https://img.freepik.com/free-photo/stone-texture_1194-5352.jpg?t=st=1718659928~exp=1718663528~hmac=b8c939552b6f00372742a3c47f8f179d92df16348d0234e756c98c79427d1743&w=996);
+    background-color: whitesmoke;
+}
+#nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(7, 7, 7);
+    height: 10vh;
+}
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
