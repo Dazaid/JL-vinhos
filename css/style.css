@@ -1,6 +1,11 @@
 *{
     margin: 0;
     color: whitesmoke;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 body{
     background-image: url(https://img.freepik.com/free-photo/stone-texture_1194-5352.jpg?t=st=1718659928~exp=1718663528~hmac=b8c939552b6f00372742a3c47f8f179d92df16348d0234e756c98c79427d1743&w=996);
@@ -12,11 +17,148 @@ body{
     justify-content: space-between;
     background-color: rgb(7, 7, 7);
     height: 10vh;
+    top: 0;
+    position: sticky;
+    z-index: 4;
 }
-.flex{
-    display: flex;
+#home{
+  height: 91vh;
 }
-.center{
-    justify-content: center;
-    align-items: center;
+
+#about-container{
+  position: relative;
+  height: 100vw;
+  background-image: url(/img/ManchaAbout.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+  display: flex;
 }
+
+.less-r{
+  right: -10rem;
+  z-index: 0;
+}
+
+/* ----------------- test effects ---------------- */
+
+.temp{
+  background-color: red;
+}
+
+.welcome{
+  z-index: 5;
+  height: 100vh;
+  overflow: hidden;
+}
+.welcome video{
+  width: 100vw;
+  height: fit-content;
+}
+
+/* @keyframes pullrope {
+  0%   {top: -120px;}
+  25%  {top: -110px;}
+  50%  {top: -100px;}
+  75%  {top: -110px;}
+  100% {top: -120px;}
+} */
+
+.rope {
+  height: 70vh;
+  /* position: fixed;  */
+  top: -120px;
+  left: 50px;
+  z-index: 6;
+  /* animation: pullrope 4s infinite;  */
+}
+
+
+.rope:hover{
+  transition: 0.3s !important;
+  top: -70px;
+}
+
+#playButton {
+  border: none;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+}
+
+#myVideo {
+  display: block;
+  transition: opacity 1s ease-in-out;
+}
+
+
+/* ----------------- houver effects ---------------- */
+
+.nav-item p:hover{
+  transition: 0.3s;
+  scale: 1.2;
+  background: #985826;
+  background: linear-gradient(to top, #A86127 0%,  #E88F63 25%, #FDF4A4 50%, #F2CF6F 75%, #A85F27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-decoration-line: underline;
+  text-decoration-color: #FDF4A4;
+  text-underline-offset: 10px; */
+}
+
+/* ----------------- fonts ---------------- */
+.jl-gradient{
+  background: #985826;
+  background: linear-gradient(to top, #A86127 0%,  #E88F63 25%, #FDF4A4 50%, #F2CF6F 75%, #A85F27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

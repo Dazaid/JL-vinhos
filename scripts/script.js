@@ -1,16 +1,17 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(() => {
-        const textToCopy = 'jl.vinhos@gmail.com';
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            const messageElement = document.getElementById('message');
-            messageElement.classList.add('show');
-            
-            // Ocultar el mensaje después de 3 segundos
-            setTimeout(() => {
-                messageElement.classList.remove('show');
-            }, 3000);
-        }).catch(err => {
-            console.error('Error copying text: ', err);
-        });
-    }, 500);
-});
+document.getElementById('playButton').addEventListener('click', function() {
+    var video = document.getElementById('myVideo');
+    video.play();
+  });
+
+  document.getElementById('myVideo').addEventListener('ended', function() {
+    var video = document.getElementById('myVideo');
+    var button = document.getElementById('playButton');
+    video.style.opacity = '0';
+    button.style.opacity = '0';
+
+    // Esconde los elementos completamente después de la transición
+    setTimeout(function() {
+      video.style.display = 'none';
+      button.style.display = 'none';
+    }, 500); // 1 segundo para coincidir con la duración de la transición
+  });

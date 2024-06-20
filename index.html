@@ -2,27 +2,51 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="Maria Luis F Gomes" content="Invitational Card">
+    <meta name="JL vinhos" content="Wine Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Joel Leite</title>
+    <title>JL vinhos</title>
 </head>
 <body>
+    <div class="fixed welcome hidden">
+        <div><img id="playButton" class="fixed rope" src="img/rope.png" alt=""></div>
+        <video id="myVideo" src="vid/utomp3.com - Stage red curtain opening sequence.mp"></video>
+    </div>
     <div id="body">
         <nav id="nav-bar">
-            <div class="flex center">
-                <img height="60" src="img/JL logo.png" alt="logo">
-                <h2>JL vinhos</h2>
+            <div class="flex items-center p-4">
+                <a href="#home"><img class="h-16" src="img/JL logo.png" alt="logo"></a>
+                <a href="#home"><h1 class="jl-gradient text-4xl merriweather-black p-4">JL vinhos</h1></a>
             </div>
-            <div class="flex center">
-                <a href="#"><p>About</p></a>
-                <a href="#"><p>Contact</p></a>
+            <div class="text-lg flex items-center p-8">
+                <a class="p-8 nav-item" href="#"><p>About</p></a>
+                <a class="p-8 nav-item" href="#"><p>Contact</p></a>
             </div>
         </nav>
+        <section id="home">
+            <div class="absolute w-4/5 less-r top-16"> <img src="img/GradientHome.png" alt=""></div>
+            <h3 class="absolute top-64 left-16 text-neutral-950 text-8xl merriweather-black-italic p-4">“Apreciar vinho</h3>
+            <h3 class="absolute top-96 right-32 text-neutral-950 text-8xl merriweather-black-italic p-4 text-slate-50">é uma <strong class="jl-gradient">ARTE</strong>”</h3>
+        </section>
+        <section id="about">
+            <div id="about-container">
+                <div class="w-8/12">
+                    <div class="p-32 text-center">
+                        <h2 class="p-16 text-slate-50 text-8xl merriweather-black">About</h2>
+                        <p class="merriweather-regular text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis excepturi vero laboriosam nisi corrupti unde incidunt, inventore ut ea assumenda, ex accusamus error modi quod qui ab voluptatibus officiis nam sit similique dolorem perferendis! Aperiam suscipit delectus facere? Deserunt, ipsam eveniet inventore modi architecto, officiis molestias maiores at excepturi eum veniam adipisci! Doloribus molestias veniam deserunt a necessitatibus animi assumenda magni distinctio, dolorum eligendi libero eum in optio architecto beatae fugiat voluptates adipisci dicta error doloremque numquam perferendis! Expedita, obcaecati nulla nemo quaerat nostrum aliquam a laborum quibusdam, labore earum ea in ipsa molestias asperiores, ut corrupti iusto perspiciatis nesciunt.</p>
+                    </div>
+                </div>
+                <div class="h-full w-4/12 temp"></div>
+            </div>
+        </section>
     </div>
     <script src="scripts/script.js"></script>
 </body>
