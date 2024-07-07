@@ -7,10 +7,14 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
+
 body{
     background-image: url(https://img.freepik.com/free-photo/stone-texture_1194-5352.jpg?t=st=1718659928~exp=1718663528~hmac=b8c939552b6f00372742a3c47f8f179d92df16348d0234e756c98c79427d1743&w=996);
     background-color: whitesmoke;
+    overflow-x: hidden;
+    
 }
+
 #nav-bar{
     display: flex;
     align-items: center;
@@ -21,30 +25,124 @@ body{
     position: sticky;
     z-index: 4;
 }
+
 #home{
   height: 91vh;
+}
+
+#GradientHome{
+  height: 70rem;
+  background-image: url(/img/GradientHome.png);
+  background-size: cover;
 }
 
 #about-container{
   position: relative;
   height: 100vw;
   background-image: url(/img/ManchaAbout.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 3;
   display: flex;
+  justify-content: space-between;
 }
 
-.less-r{
-  right: -10rem;
-  z-index: 0;
+#contact-container{
+  margin-top: -1rem;
+  height: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* ----------------- test effects ---------------- */
-
-.temp{
-  background-color: red;
+.lesstop-10{
+  margin-top: -10rem;
 }
+
+.lesstop-45{
+  margin-top: -45rem;
+}
+
+#poligon{
+  overflow: hidden;
+  clip-path: polygon(0% 28%, 7% 26%, 12% 26%, 16% 27%, 20% 29%, 23% 32%, 28% 32%, 33% 28%, 39% 28%, 44% 30%, 49% 30%, 53% 32%, 56% 32%, 61% 32%, 64% 30%, 67% 29%, 72% 27%, 76% 25%, 81% 25%, 88% 30%, 95% 32%, 100% 32%, 100% 36%, 100% 64%, 100% 80%, 100% 90%, 100% 97%, 91% 96%, 96% 96%, 84% 92%, 80% 95%, 77% 96%, 73% 96%, 69% 95%, 64% 95%, 61% 96%, 57% 97%, 54% 97%, 46% 95%, 43% 94%, 37% 94%, 33% 94%, 28% 95%, 21% 95%, 18% 93%, 16% 93%, 12% 93%, 9% 93%, 6% 97%, 2% 97%, 0% 95%, 0% 93%);
+  background-color: #985826;
+  position: relative;
+  z-index: 2;
+  
+}
+.jl-gradient-bar{
+  background: rgb(168,97,39);
+  background: linear-gradient(0deg, rgba(168,97,39,1) 0%, rgba(253,244,164,1) 50%, rgba(168,97,39,1) 100%);
+}
+footer{
+  margin-top: -10rem;
+  background-color: rgb(7, 7, 7);
+  height: 40vh;
+}
+/* ----------------- scroll effects ---------------- */
+
+
+/* scroll wine effects */
+
+.fixtransopacity{
+  opacity: 0;
+  transition: 0.5s;
+}
+
+
+.wine-image-container {
+    mix-blend-mode: multiply;
+    height: 41rem;
+    width: 11rem;
+}
+.bwine-liquid {
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.top-extra{
+  top: 50rem;
+}
+
+
+
+
+#scrollContainer {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.scroll-snap-item {
+  box-sizing: border-box;
+}
+
+
+/* ----------------- test welcome effects ---------------- */
+
+.animation-lefthand{
+  animation: rotateImage 7s linear infinite !important;
+  transform-origin: bottom left;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 
 .welcome{
   z-index: 5;
@@ -106,11 +204,17 @@ body{
 }
 
 /* ----------------- fonts ---------------- */
+
 .jl-gradient{
   background: #985826;
   background: linear-gradient(to top, #A86127 0%,  #E88F63 25%, #FDF4A4 50%, #F2CF6F 75%, #A85F27 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+.porcent-font{
+  font-size: 5.5vw;
 }
 
 

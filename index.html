@@ -11,42 +11,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>JL vinhos</title>
 </head>
 <body>
+
     <div class="fixed welcome hidden">
         <div><img id="playButton" class="fixed rope" src="img/rope.png" alt=""></div>
         <video id="myVideo" src="vid/utomp3.com - Stage red curtain opening sequence.mp"></video>
     </div>
-    <div id="body">
-        <nav id="nav-bar">
+
+    <div class="scrollContainer" id="body">
+
+        <nav id="nav-bar" class="animate__animated animate__fast animate__slideInDown">
             <div class="flex items-center p-4">
                 <a href="#home"><img class="h-16" src="img/JL logo.png" alt="logo"></a>
                 <a href="#home"><h1 class="jl-gradient text-4xl merriweather-black p-4">JL vinhos</h1></a>
             </div>
             <div class="text-lg flex items-center p-8">
-                <a class="p-8 nav-item" href="#"><p>About</p></a>
-                <a class="p-8 nav-item" href="#"><p>Contact</p></a>
+                <a class="p-8 nav-item" href="#about-start"><p>Sobre Nos</p></a>
+                <a class="p-8 nav-item" href="#contact"><p>Contatos</p></a>
             </div>
         </nav>
-        <section id="home">
-            <div class="absolute w-4/5 less-r top-16"> <img src="img/GradientHome.png" alt=""></div>
-            <h3 class="absolute top-64 left-16 text-neutral-950 text-8xl merriweather-black-italic p-4">“Apreciar vinho</h3>
-            <h3 class="absolute top-96 right-32 text-neutral-950 text-8xl merriweather-black-italic p-4 text-slate-50">é uma <strong class="jl-gradient">ARTE</strong>”</h3>
+
+        <img id="btlHand" class="w-7/12 fixed top-24 right-0 overflow-hidden z-50 opacity-0" src="/img/btlHand.png" alt="">
+        <img id="cupHand" class="w-5/12 fixed top-96 left-0 overflow-hidden z-50 opacity-0" src="/img/cupHand.png" alt="">
+        <section class="scroll-snap-item" id="home">
+
+            <div id="GradientHome" class="absolute w-4/5 end-0 top-0 overflow-x-hidden"></div>
+            <h3 class="absolute top-32 left-8 text-neutral-950 porcent-font merriweather-black-italic animate__animated animate__fast animate__fadeInLeft">“Apreciar vinho</h3>
+            <h3 class="absolute bottom-32 right-16 porcent-font merriweather-black-italic text-slate-50 animate__animated animate__fast animate__fadeInRight">é uma <strong class="jl-gradient">ARTE</strong>”</h3>
         </section>
-        <section id="about">
+
+
+        <div id="winebottle" class="sticky right-20 top-extra z-10 transition-opacity duration-75 opacity-0"> 
+            <img id="bempty" class="absolute bottom-0 right-20 z-20 opacity-0" src="img/empty.png" alt="">
+            <div id="winediv" class="wine-image-container absolute bottom-2 right-20 z-30 opacity-0"><img id="bwine" class="absolute bwine-liquid bottom-2 right-0 opacity-0" src="img/winemultiply.png" alt=""></div>
+            <img id="bfull" class="absolute bottom-0 right-20 z-40 opacity-0" src="img/full.png" alt="">
+        </div>
+
+
+        <section class="scroll-snap-item" id="about">
             <div id="about-container">
-                <div class="w-8/12">
-                    <div class="p-32 text-center">
-                        <h2 class="p-16 text-slate-50 text-8xl merriweather-black">About</h2>
-                        <p class="merriweather-regular text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis excepturi vero laboriosam nisi corrupti unde incidunt, inventore ut ea assumenda, ex accusamus error modi quod qui ab voluptatibus officiis nam sit similique dolorem perferendis! Aperiam suscipit delectus facere? Deserunt, ipsam eveniet inventore modi architecto, officiis molestias maiores at excepturi eum veniam adipisci! Doloribus molestias veniam deserunt a necessitatibus animi assumenda magni distinctio, dolorum eligendi libero eum in optio architecto beatae fugiat voluptates adipisci dicta error doloremque numquam perferendis! Expedita, obcaecati nulla nemo quaerat nostrum aliquam a laborum quibusdam, labore earum ea in ipsa molestias asperiores, ut corrupti iusto perspiciatis nesciunt.</p>
+                <div class="w-9/12 flex">   
+                    <div class="p-32 text-center content-center	items-center overflow-scroll">
+                        <div id="about-start" class="h-1 w-1 pb-10"></div>
+                        <h2 id="title1" class="p-16 text-slate-50 text-8xl merriweather-black opacity-0">Sobre nos</h2><br><br>
+                        <p id="text1" class="leading-10 merriweather-regular text-2xl opacity-0">Somos uma empresa apaixonada por vinhos e por proporcionar aos nossos clientes experiências únicas e memoráveis no mundo do vinho. Acreditamos que o vinho não é apenas uma bebida, mas uma arte que deve ser apreciada e desfrutada na sua plenitude.
+                            Oferecemos uma ampla variedade de experiências vínicas que atendem a todos os níveis de conhecimento e interesse, desde iniciantes até especialistas.</p> <br>
+                        <p id="text1-1" class="leading-10 merriweather-regular text-2xl"> Trabalhamos apenas com produtores de vinhos excecionais e de alta qualidade, escolhidos pela nossa equipa. Acreditamos que a qualidade do vinho é essencial para a experiência como um todo e, por isso, esforçamo-nos para selecionar apenas os melhores vinhos para nossos clientes.</p>
                     </div>
                 </div>
-                <div class="h-full w-4/12 temp"></div>
+                <div class="h-full w-3/12 temp"></div>
             </div>
         </section>
+
+
+        <section class="scroll-snap-item" id="contact">
+            <div id="contact-container">
+                <div class="w-9/12">
+                    <div class="p-32 text-center">
+                        <h2 id="title2" class="p-16 text-neutral-950 text-8xl merriweather-black opacity-0">Contatos</h2>
+                        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.1/build/spline-viewer.js" async></script>
+                        <div id="contact-card" class="opacity-0"><spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/pDYcFDnUVS-6kOF5/scene.splinecode"><img src="data:image/png;base64,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" alt="Spline preview" style="width: 100%; height: 100%;"/></spline-viewer></div>                    
+                    </div>
+                </div>
+                <div class="h-full w-3/12 temp"></div>
+            </div>
+        </section>
+
+
+        <div class="lesstop-45 w-9/12 scroll-snap-item">
+            <h3 id="title3" class="text-neutral-950 text-6xl merriweather-black-italic p-1 opacity-0">Deguste a vida</h3>
+            <h3 id="title4" class="text-neutral-950 text-6xl merriweather-black-italic text-center p-1 pr-28 opacity-0">com nossas</h3>
+            <h3 id="title5" class="text-neutral-950 text-6xl merriweather-black-italic text-end p-1 opacity-0">experiências vínicas!</h3>
+        </div>
+        <div class="h-full w-3/12 temp"></div>
+
+
+        <section class="lesstop-10 scroll-snap-item">
+            <div id="poligon">
+                <iframe width="100%" height="1015" src="https://www.youtube.com/embed/OGVDu3ivhTY?si=vKRqUE5IBC9rXVmO&amp;controls=0&autoplay=1&mute=1&cc_load_policy=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen play></iframe>
+            </div>
+        </section>
+
+
+        <footer class="scroll-snap-item">
+            <div class="w-full h-2/4"></div>
+            <div class="p-4 text-center">
+                <address>Localização:    R. da Rasa 114, 4400-267 Vila Nova de Gaia</address>
+                <p>Telemovel: +351 912928160</p>
+                <p>E-mail: jl.vinhos@gmail.com</p>
+            </div>
+            <div class="flex justify-center"><div class="h-0.5 w-full jl-gradient-bar"></div></div>
+            <p class="p-4 text-center">© 2024 JL vinhos - All rights reserved</p>
+        </footer>
+
+
     </div>
     <script src="scripts/script.js"></script>
 </body>
