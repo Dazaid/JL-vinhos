@@ -159,11 +159,11 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('load', function() {  //---- problemas de effectos con scroll al cargar la pagina
-  // Simular scroll bajando 200 píxeles
+
   window.scrollBy(0, 1);
   
-  // Introducir un pequeño retraso antes de volver al inicio
+ 
   setTimeout(function() {
     window.scrollBy(0, -1);
-  }, 50); // Ajusta el tiempo de retardo según sea necesario
+  }, 50); 
 });
