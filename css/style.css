@@ -94,7 +94,7 @@ body {
 .bkg0 {
   position: absolute;
   top: 0;
-  z-index: -4;
+  z-index: -5;
   width: 100vw;
   height: 900vh;
 }
@@ -102,7 +102,7 @@ body {
 .bkg1 {
   position: absolute;
   top: 0;
-  z-index: -3;
+  z-index: -4;
   width: 100vw;
   height: 900vh;
   animation: zoomInOut2 10s linear infinite;
@@ -111,7 +111,7 @@ body {
 .bkg2 {
   position: absolute;
   top: 0;
-  z-index: -2;
+  z-index: -3;
   width: 100vw;
   height: 900vh;
   mix-blend-mode: overlay;
@@ -121,9 +121,9 @@ body {
 .bkg3 {
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100vw;
-  height: 900vh;
+  height: 890vh;
   mix-blend-mode: overlay;
 }
 
@@ -403,8 +403,33 @@ body {
   position: relative;
   top: 10vw;
   text-align: right;
-  background-color: rgba(240, 248, 255, 0.322);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+#coins-container {
+  margin: 13rem 0rem 0rem 30vw;
+  width: 70%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.temp {
+  background-image: url('https://i.ebayimg.com/images/g/k6cAAOSwRZ5kbCVN/s-l1200.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 26vh;
+  width: 26vh;
+  margin: 4vw;
+  margin-bottom: 10vw;
+}
+
+/* gallery section */
 
 #gallery {
   width: 100vw;
@@ -499,7 +524,8 @@ path {
 
 .absolute {
   position: absolute;
-  z-index: 99;
+  z-index: 5;
+  height: 29VW;
 }
 
 /* angels + statue position*/
@@ -525,9 +551,11 @@ path {
 }
 
 .statue{
-  background-image: url(../img/base_art/Nubes_Main.webp);
+  /* background-image: url(../img/base_art/Nubes_Main.webp); */
   top: 535vh;
   left: 3vw;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  position: absolute;
+  z-index: 5;
 }
