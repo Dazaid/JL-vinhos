@@ -1,11 +1,11 @@
 window.addEventListener('load', function () {  //---- problemas de effectos con scroll al cargar la pagina
 
-    window.scrollBy(0, 1);
+    window.scrollBy(0, 2);
 
 
     setTimeout(function () {
-        window.scrollBy(0, -1);
-    }, 50);
+        window.scrollBy(0, -2);
+    }, 100);
 });
 
 
