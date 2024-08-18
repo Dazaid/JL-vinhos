@@ -538,6 +538,7 @@ path {
 .bb2 {
   top: 190vh;
   left: 2vw;
+  height: auto !important;
 }
 
 .bb3{
