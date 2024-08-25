@@ -144,6 +144,7 @@ body {
 
 /* Nav bar */
 #nav-bar {
+  font-size: 2rem;
   position: sticky;
   z-index: 99;
   top: 0;
@@ -230,7 +231,7 @@ body {
 }
 
 .section-tittle {
-  font-size: 2rem;
+  font-size: 2.6rem;
   position: relative;
   top: 6rem;
   text-align: center;
@@ -261,7 +262,7 @@ body {
 }
 
 #about-title {
-  font-size: 2rem;
+  font-size: 2.6rem;
   position: relative;
   top: 10vw;
   text-align: left;
@@ -278,7 +279,7 @@ body {
 }
 
 #about-container > p {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   letter-spacing: 0.03rem;
   line-height: 1.5rem;
 }
@@ -335,12 +336,12 @@ body {
 }
 
 .carousel-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .carousel-text {
-  font-size: 0.7rem;
+  font-size: 1.4rem;
 }
 
 .carousel-img:hover {
@@ -415,7 +416,7 @@ body {
 }
 
 #contacts-tittle {
-  font-size: 4rem;
+  font-size: 5rem;
   padding: 2rem;
   padding-right: 25vw;
   letter-spacing: 0.3rem;
