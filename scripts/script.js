@@ -196,7 +196,7 @@ window.addEventListener('scroll', function() {
     var scrollPositionY = window.scrollY;
 
     // Verificar si la posición del scroll es mayor a 3560
-    if (scrollPositionY > 3560) {
+    if (scrollPositionY > 4300) {
         // Obtener todos los elementos con la clase "coinUp"
         var coinElements = document.querySelectorAll('.coinUp');
 
@@ -207,7 +207,7 @@ window.addEventListener('scroll', function() {
             }, index * 300); // retraso por cada elemento
         });
     }
-    if (scrollPositionY > 3960) {
+    if (scrollPositionY > 4800) {
         var coinElements2 = document.querySelectorAll('.coinBottom');
 
         coinElements2.forEach(function(element2, index) {
