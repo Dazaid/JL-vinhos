@@ -1,18 +1,35 @@
+// window.addEventListener('load', function () {
+//     // Cuando la página se haya cargado completamente, elimina el preloader
+//     var preloader = document.getElementById('preloader');
+//     var content = document.getElementById('content');
+//     var prebtlHand = document.getElementById('btlHand');
+//     var precupHand = document.getElementById('cupHand');
+//     setTimeout(function () {
+//         preloader.classList.add('fade');
+//         content.classList.add('loaded');
+//     }, 1800); // Tiempo para la transición de desvanecimiento
+
+//     setTimeout(function () {
+//         preloader.classList.add('out');
+//     }, 2000); // Tiempo para display none
+
+// });
+
 window.addEventListener('load', function () {  //---- problemas de effectos con scroll al cargar la pagina
 
-    window.scrollBy(0, 2);
+    window.scrollBy(0, 1);
 
 
     setTimeout(function () {
-        window.scrollBy(0, -2);
-    }, 100);
+        window.scrollBy(0, -1);
+    }, 50);
 });
 
 
 
 window.addEventListener('scroll', function () {
     // Calcular el desplazamiento de la imagen de fondo
-    let offset = window.pageYOffset;
+    let offset = window.scrollY;
     document.body.style.backgroundPositionY = offset * 0 + "px";
     document.querySelector('.bkg1').style.transform = 'translateY(' + offset * 0.5 + 'px)';
     document.querySelector('.bkg2').style.transform = 'translateY(' + offset * 0.03 + 'px)';
@@ -81,6 +98,37 @@ setInterval(autoMoveCarousel2, 5100); // Cambia de imagen cada 3 segundos
 
 updateCarousel2();
 
+// ---------------------- Carrusel Arte ------------------------------------------------
+
+
+let frameCurrentIndex = 0;
+const frameItems = document.querySelectorAll('.carousel-item');
+const frameTotalItems = frameItems.length;
+
+// Número de artículos visibles a la vez
+const frameItemsPerView = 3;
+
+// Calcula el número total de movimientos posibles (por bloques de 3)
+const frameTotalMoves = Math.ceil(frameTotalItems / frameItemsPerView);
+
+function moveFrameCarousel(direction) {
+    frameCurrentIndex = (frameCurrentIndex + direction + frameTotalMoves) % frameTotalMoves;
+    updateFrameCarousel();
+}
+
+function updateFrameCarousel() {
+    const frameCarouselWrapper = document.querySelector('.carousel-wrapper');
+    // Multiplica por el ancho de la vista para mover de 3 en 3
+    frameCarouselWrapper.style.transform = `translateX(-${frameCurrentIndex * 100}%)`;
+}
+
+function autoMoveFrameCarousel() {
+    moveFrameCarousel(1);
+}
+
+setInterval(autoMoveFrameCarousel, 5000); // Cambia de imagen cada 3 segundos
+
+updateFrameCarousel();
 
 
 
@@ -97,8 +145,8 @@ window.addEventListener('scroll', function () {
 
     if (!actionExecuted && scrollPosition < 400) {
 
-        btlHand.setAttribute("class", "fixed top-28 right-0 w-[45vw] overflow-hidden z-1 animate__fadeInRight animate__animated animate__slow opacity-1");
-        cupHand.setAttribute("class", "fixed top-80 left-0 w-[45vw] overflow-hidden z-50 animate__fadeInLeft animate__animated animate__slow opacity-1");
+        btlHand.setAttribute("class", "fixed top-28 right-0 w-[45vw] z-1 animate__fadeInRight animate__animated animate__slow opacity-1");
+        cupHand.setAttribute("class", "fixed top-80 left-0 w-[45vw] z-50 animate__fadeInLeft animate__animated animate__slow opacity-1");
         setTimeout(function () {
             cupHand.classList.add("animation-lefthand");
         }, 2000);
@@ -117,6 +165,124 @@ window.addEventListener('scroll', function () {
         cupHand.classList.add("hidden");
     }
 
+    if (document.referrer && scrollPosition >= 640) {
+        cupHand.classList.add("hidden");
+        btlHand.classList.add("hidden");
+    }
+
+    var aboutTitle = document.getElementById("about-title");
+    var aboutContent = document.getElementById("about-container");
+    var aboutText = document.querySelectorAll('.about-content');
+
+    if (scrollPosition >= 640) {
+        aboutTitle.setAttribute("class", "animate__fadeInUp animate__animated animate__fast opacity-1");
+    }
+
+    if (scrollPosition >= 680) {
+        aboutContent.setAttribute("class", "animate__fadeInUp animate__animated animate__fast opacity-1");
+        aboutText.forEach(function(text, index) {
+            setTimeout(function() {
+                text.setAttribute("class", "animate__fadeInUp animate__animated animate__fast opacity-1");
+            }, index * 500); // retraso por cada elemento
+        });
+    }
+
+});
+
+//---------------------  Coin effect  -------------------
+
+window.addEventListener('scroll', function() {
+    // Obtener la posición actual del scroll en Y
+    var scrollPositionY = window.scrollY;
+
+    // Verificar si la posición del scroll es mayor a 3560
+    if (scrollPositionY > 3560) {
+        // Obtener todos los elementos con la clase "coinUp"
+        var coinElements = document.querySelectorAll('.coinUp');
+
+        // Añadir las tres clases a cada uno de los elementos
+        coinElements.forEach(function(element, index) {
+            setTimeout(function() {
+                element.classList.add('animate__flip', 'animate__animated', 'animate__fast');
+            }, index * 300); // retraso por cada elemento
+        });
+    }
+    if (scrollPositionY > 3960) {
+        var coinElements2 = document.querySelectorAll('.coinBottom');
+
+        coinElements2.forEach(function(element2, index) {
+            setTimeout(function() {
+                element2.classList.add('animate__flip', 'animate__animated', 'animate__fast');
+            }, index * 300); // retraso por cada elemento
+        });
+    }
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Función para interpolar entre dos colores
+
+
+
+
+function interpolateColor(color1, color2, factor) {
+    const result = color1.slice();
+    for (let i = 0; i < 3; i++) {
+        result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
+    }
+    return result;
+}
+
+// Convertir color RGB a formato CSS rgb()
+function rgbToCss(rgb) {
+    return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+}
+
+// Colores iniciales y finales (RGB)
+const initialColor = [255, 255, 255];  // Blanco
+const blackColor = [0, 0, 0]; // Negro
+
+// Manejar el evento de scroll
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const startScroll = 2000;
+    const endScroll = 5000;
+
+    // Calcular el progreso del scroll entre 2000 y 5000
+    const scrollFactor = Math.min(Math.max((scrollPosition - startScroll) / (endScroll - startScroll), 0), 1);
+
+    // Calcular el color interpolado
+    const interpolatedColor = interpolateColor(initialColor, blackColor, scrollFactor);
+
+    // Aplicar el color al texto, fill de los path y la imagen
+    const navBar = document.getElementById('nav-bar');
+    const newColor = rgbToCss(interpolatedColor);
+
+    // Cambiar el color de los enlaces de navegación
+    navBar.querySelectorAll('li').forEach(li => {
+        li.style.color = newColor;
+    });
+
+    navBar.querySelectorAll('h2').forEach(h2 => {
+        h2.style.color = newColor;
+    });
+
+    // Cambiar el filtro de la imagen a negro
+    navBar.querySelectorAll('img').forEach(img => {
+        img.style.filter = `brightness(${1 - scrollFactor})`;
+    });
+});

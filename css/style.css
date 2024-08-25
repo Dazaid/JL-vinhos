@@ -72,6 +72,21 @@ a {
   text-decoration: none;
 }
 
+/* #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #FFF;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+} */
+
+
 body {
   /* background-image: url(/img/Landingpage0.webp);
   background-size: cover;
@@ -121,10 +136,10 @@ body {
 .bkg3 {
   position: absolute;
   top: 0;
-  z-index: -2;
+  /* z-index: 2; */
   width: 100vw;
   height: 890vh;
-  mix-blend-mode: overlay;
+
 }
 
 /* Nav bar */
@@ -142,6 +157,10 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.js-color-change {
+  color: #FFF; 
 }
 
 .nav-l-items {
@@ -391,7 +410,7 @@ body {
 
 #contacts {
   width: 100vw;
-  height: 200vh;
+  height: 173vh;
   /* background-color: rgb(104, 154, 247); */
 }
 
@@ -417,25 +436,141 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .temp {
-  background-image: url('https://i.ebayimg.com/images/g/k6cAAOSwRZ5kbCVN/s-l1200.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
   height: 26vh;
   width: 26vh;
   margin: 4vw;
   margin-bottom: 10vw;
+  z-index: 7;
+}
+
+.temp:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  filter: drop-shadow(0 1rem 0.3rem rgb(0, 0, 0));
 }
 
 /* gallery section */
 
 #gallery {
   width: 100vw;
-  height: 186vh;
+  height: 200vh;
+  background-image: url('../img/base_art/GalleryBkg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background-color: rgb(205, 213, 228); */
 }
+
+#art-container {
+  position: absolute;
+  top: 735vh;
+  width: 100vw;
+  height: 1vh;
+}
+
+.bkg-gallery {
+  width: 100vw;
+  height: 200vh;
+}
+
+.artist-name-container {
+  position: absolute;
+  top: 749vh;
+  left: 36vw;
+  width: 27vw;
+}
+
+.L-arrow-mini {
+  position: absolute;
+  top: 746vh;
+  left: 30vw;
+  width: 6.5vw;
+}
+
+.R-arrow-mini {
+  position: absolute;
+  top: 746vh;
+  left: 63vw;
+  width: 6.5vw;
+  
+}
+
+.art-frame {
+  position: absolute;
+  top: 763vh;
+  left: 33vw;
+  width: 33vw;
+  height: 68vh;
+}
+
+.L-arrow {
+  position: absolute;
+  top: 774vh;
+  left: 10vw;
+  width: 15vw;
+}
+
+.R-arrow {
+  position: absolute;
+  top: 774vh;
+  left: 75vw;
+  width: 15vw;
+}
+
+.L-arrow:hover, .R-arrow:hover, .L-arrow-mini:hover, .R-arrow-mini:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#artist-name {
+  position: absolute;
+  text-align: center;
+  /* background-color: blue; */
+  top: 750.7vh;
+  left: 36vw;
+  width: 27vw;
+  z-index: 9;
+  font-size: 2rem;
+}
+
+#artist-name h2 {
+  color: rgb(0, 0, 0);
+}
+
+.art-carousel-container {
+  position: absolute;
+  max-width: 100%;
+  height: 30vw;
+  min-height: calc(28rem + 1vw);
+  overflow: hidden;
+  top: 767.7vh;
+  /* background-color: rgba(0, 255, 255, 0.336); */
+}
+
+video{
+  position: absolute;
+  top: 762vh;
+  left: 34vw;
+  width: 30vw;
+  height: 68vh;
+}
+
+.art-carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+}
+.art-carousel-item {
+  width: 30%; /* Mostrar 3 artículos a la vez (100% / 3) */
+  padding: 10px; /* Espaciado entre los artículos */
+}
+
+/* footer */
+
 footer {
   width: 100vw;
   background-color: rgb(5, 5, 5);
@@ -528,7 +663,7 @@ path {
   height: 29VW;
 }
 
-/* angels + statue position*/
+/* angels + statue position */
 
 .bb1 {
   top: 125vh;
@@ -538,7 +673,7 @@ path {
 .bb2 {
   top: 190vh;
   left: 2vw;
-   height: 21vw !important;
+  height: 21vw !important;
 }
 
 .bb3{
@@ -559,4 +694,9 @@ path {
   transform: scaleX(-1);
   position: absolute;
   z-index: 5;
+  filter: drop-shadow(1rem 1rem 0.75rem rgba(0, 0, 0, 0.726));
+}
+
+.pre-fade {
+  opacity: 0;
 }

@@ -26,13 +26,17 @@
 </head>
 
 <body id="start">
+    <!-- 
+    <div class="" id="preloader">
+        <img src="img/base_art/LoadLogo.gif" alt="Loading Image">
+    </div> -->
+
     <img class="bkg0" src="img/base_art/Fondo.webp" alt="imagem do fundo 0">
     <div class="bkg-container">
         <img class="bkg1" src="img/base_art/Nubes_bg.webp" alt="imagem do fundo 1">
         <img class="bkg2" src="img/base_art/Nubes_Main.webp" alt="imagem do fundo 2">
-        <img class="bkg3" src="img/base_art/Spacer.webp" alt="imagem do fundo 2">
     </div>
-
+    <img class="bkg3" src="img/base_art/Spacer.webp" alt="imagem do fundo 2">
     <!------------------- angels + statue position---------------->
     <img class="absolute bb1" src="img/base_art/bb1.webp" alt="imagem de um angel com uma garrafa de vinho e uma copa">
     <img class="absolute bb2" src="img/base_art/bb2.webp" alt="imagem de um angel com uma copa de vinho">
@@ -41,19 +45,19 @@
     <img class="statue" src="img/base_art/statue.webp" alt="imagem de uma estatua">
 
     <!------------------- nav bar ---------------->
-    <nav id="nav-bar">
+    <nav id="nav-bar" class="animate__fadeInDown animate__animated animate__fast">
         <div class="nav-l-items">
             <a href="#start"><img class="nav-logo" src="img/JLlogo.webp" alt="Logo do JL vinhos"
                     title="Logo da empresa"></a>
             <a href="#start">
-                <h2>JL Vinhos</h2>
+                <h2 class="js-color-change">JL Vinhos</h2>
             </a>
         </div>
-        <ul class="nav-r-items">
+        <ul class="nav-r-items js-color-change">
             <li><a href="#about">Nos</a></li>
             <li><a href="#wines">Vinhos</a></li>
             <li><a href="#contacts">Contatos</a></li>
-            <li><a href="#gallery">Arte</a></li>
+            <li><a href="#art-container">Arte</a></li>
             <li><a target="_blank" href="https://api.whatsapp.com/send?phone=351912928160"><img
                         src="img/shoppingCarIcon.png" alt="icone de compras do site JL vinhos"
                         title="icone de compras"></a></li>
@@ -61,33 +65,45 @@
         </ul>
     </nav>
     <header id="home">
-        <h1 class="home-tittle-left">“Apreciar ‎
+        <h1 class="home-tittle-left animate__fadeInDown animate__animated animate__slow">“Apreciar ‎
             <strong>vinhos</strong>
-            <span class="home-tittle-right">é uma ARTE”</span>
+            <span class="home-tittle-right animate__fadeInDown animate__animated animate__slower">é uma ARTE”</span>
         </h1>
-        <img id="cupHand" class="fixed top-80 left-0 z-1 w-[45vw] opacity-0" src="img/base_art/Hand1f.png"
-            alt="um brazo com uma copa de vinho na mão">
-        <img id="btlHand" class="fixed top-28 right-0 z-1 w-[45vw] opacity-0" src="img/base_art/Hand2f.png"
-            alt="um brazo com uma garrafa de vinho na mão">
+        <img id="cupHand"
+            class="fixed top-80 left-0 z-1 w-[45vw] opacity-0 animate__fadeInLeft animate__animated animate__slow"
+            src="img/base_art/Hand1f.png" alt="um brazo com uma copa de vinho na mão">
+        <img id="btlHand"
+            class="fixed top-28 right-0 z-1 w-[45vw] opacity-0 animate__fadeInRight animate__animated animate__slow"
+            src="img/base_art/Hand2f.png" alt="um brazo com uma garrafa de vinho na mão">
     </header>
-<!------------------- about section ---------------->
+    <!------------------- about section ---------------->
     <section id="about">
-        <h2 id="about-title">
+        <h2 class="pre-fade" id="about-title">
             Quem somos
         </h2>
         <article id="about-container">
             <p>
-                Somos uma empresa apaixonada por vinhos e por proporcionar aos nossos clientes experiências únicas e
-                memoráveis no mundo do vinho. Acreditamos que o vinho nã é apenas uma bebida, mas uma arte que deve ser
-                apreciada e
-                desfrutada na sua plenitude.
+                <span class="pre-fade about-content">Somos uma empresa apaixonada por vinhos e por proporcionar aos
+                    nossos clientes experiências únicas
+                    e
+                    memoráveis no mundo do vinho. Acreditamos que o vinho nã é apenas uma bebida, mas uma arte que deve
+                    ser
+                    apreciada e
+                    desfrutada na sua plenitude.
+                </span>
                 <br><br>
-                Oferecemos uma ampla variedade de experiências vínicas que atendem a todos os níveis de conhecimento e
-                interesse, desde iniciantes até especialistas
+                <span class="pre-fade about-content">
+                    Oferecemos uma ampla variedade de experiências vínicas que atendem a todos os níveis de conhecimento
+                    e
+                    interesse, desde iniciantes até especialistas
+                </span>
                 <br><br>
-                Trabalhamos apenas com produtores de vinhos excecionais e de alta qualidade, escolhidos pela nossa
-                equipa. Acreditamos que a qualidade do vinho é essencial para a experiência como um todo e, por isso,
-                esforçamo-nos para selecionar apenas os melhores vinhos para nossos clientes.
+                <span class="pre-fade about-content">Trabalhamos apenas com produtores de vinhos excecionais e de alta
+                    qualidade, escolhidos pela nossa
+                    equipa. Acreditamos que a qualidade do vinho é essencial para a experiência como um todo e, por
+                    isso,
+                    esforçamo-nos para selecionar apenas os melhores vinhos para nossos clientes.
+                </span>
             </p>
         </article>
     </section>
@@ -271,18 +287,48 @@
     <section id="contacts">
         <h2 id="contacts-tittle">Contatos</h2>
         <article id="coins-container">
-            <div class="temp"></div>
-            <div class="temp"></div>
-            <div class="temp"></div>
-            <div class="temp"></div>
-            <div class="temp"></div>
+            <div class="temp coinUp"><a target="_blank" href="https://api.whatsapp.com/send?phone=351912928160"><img
+                        src="img/base_art/prews.webp" alt="coin 1"></a></div>
+            <div class="temp coinUp"><a target="_blank" href="https://www.instagram.com/jl.vinhos/"><img
+                        src="img/base_art/preins.webp" alt="coin 2"></a></div>
+            <div class="temp coinUp"><a target="_blank" href="https://maps.app.goo.gl/eahxa7G6AQjRLoF99"><img
+                        src="img/base_art/premaps.webp" alt="coin 3"></a></div>
+            <div class="temp coinBottom"><a target="_blank" href="mailto:jl.vinhos@gmail.com"><img
+                        src="img/base_art/premail.webp" alt="coin 4"></a></div>
+            <div class="temp coinBottom"><a target="_blank" href="tel:+351912928160"><img
+                        src="img/base_art/prephone.webp" alt="coin 5"></a></div>
         </article>
     </section>
 
     <!------------------- gallery section ---------------->
 
     <section id="gallery">
+        <img class="bkg-gallery" src="img/base_art/GalleryBkg.png" alt="bkg art">
+        <article>
+            <div id="art-container"></div>
+            <div id="artist-name">
+                <h2 id="artist-name-tittle">Rei</h2>
+            </div>
+            <!-- <div class="art-carousel-container"> -->
+                <!-- <div class="art-carousel-wrapper"> -->
 
+                    <!-- <article class="art-carousel-item"> -->
+                        <!-- <a href="#"><img class="art-carousel-img" src="img/bottle.webp" alt="placeholder"></a> -->
+                        <!-- onclick open in a popup -->
+                        <video autoplay loop muted>
+                            <source src="img/base_art/RebelleArtwork_240717-132642.mp4" type="video/mp4">
+                        </video>
+                    <!-- </article> -->
+                    
+                <!-- </div> -->
+            <!-- </div> -->
+            <img class="artist-name-container" src="img/base_art/GoldenNamePlate.webp" alt="Nome do artista">
+            <img class="L-arrow-mini" src="img/base_art/SmallLArrow.webp" alt="seletor esquerda mini">
+            <img class="R-arrow-mini" src="img/base_art/SmallRArrow.webp" alt="seletor esquerda mini">
+            <img class="art-frame" src="img/base_art/Frame.webp" alt="Cuadro">
+            <img class="L-arrow" src="img/base_art/BigLArrow.webp" alt="seletor esquerda">
+            <img class="R-arrow" src="img/base_art/BigRArrow.webp" alt="seletor direita">
+        </article>
     </section>
 
     <!------------------- footer section ---------------->
@@ -358,6 +404,7 @@
 
 
     </footer>
+
 
     <script src="scripts/script.js"></script>
 </body>
